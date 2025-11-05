@@ -1,3 +1,3 @@
 void main() {
-  print('Hello word!');
+  print('Dart OOP PlayGround');
 }
