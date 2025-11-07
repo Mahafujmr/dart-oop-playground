@@ -1,7 +1,7 @@
 // creation class with function
 void main() {
 // ==> instance of class= object <==
-VoterInfo voterInfo = VoterInfo();
+VoterInfo voterInfo = VoterInfo(); //=> voterInfo = object
 
 // ==> object call function  <==
 voterInfo.showResult();
@@ -14,7 +14,7 @@ class VoterInfo {
   // String? fatherName;
   // int? age;
   // properties or attributes
-  String name = 'Tuhin';
+  String name = 'Tuhin'; // name no change so this is static value
   String fatherName = 'MD.Tohidul Islam';
   int age = 22;
 
@@ -22,7 +22,6 @@ class VoterInfo {
 void showResult () {
   print('My Name is = $name');
   print('My Father Name is = $fatherName');
-
   print('My age is = $age');
 }
 
