@@ -14,6 +14,11 @@ void showResult () {
 static void mobileCharge() {
   print('Mobile charge 100%');
 }
+// creation methods
+static void addTwoNumber (var a, var b) {
+  var c = a+b;
+  print('Add Two Number = $c');
+}
 }
 // creation class instance
 void main() {
@@ -25,4 +30,8 @@ void main() {
   print(Mobile.band);
   // static or global variable access => class access static methods
   Mobile.mobileCharge();
+  // access methods add two number
+  Mobile.addTwoNumber(20, 80);
 }
+// global variable just use one time
+// global methods just use one time
