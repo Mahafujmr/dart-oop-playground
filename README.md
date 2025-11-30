@@ -5,7 +5,7 @@
 ````dart
 dart_oop/
 │
-├── lib/
+├── bin/
 │   ├── main.dart
 │   ├── class_object/
 │   │     └── person.dart
