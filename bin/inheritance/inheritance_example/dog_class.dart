@@ -9,5 +9,6 @@ class Dog extends Animal  {
 }
 // multilevel inheritance
 class Fish extends Dog {
-
+  String fishName = 'Katol';
+  double price = 100;
 }

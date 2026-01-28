@@ -16,7 +16,8 @@ void main() {
   dog.colors = 'Black';
   dog.eat();
   dog.uuu();
-
-
-
+  // fish object
+  Fish fish = Fish();
+  print('Fish name is = ${fish.fishName}');
+  print('Fish Price is = ${fish.price}');
 }
