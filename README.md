@@ -540,3 +540,154 @@ void main() {
 }
 
 ````
+
+
+### ✅ Dart OOP – Inheritance & super 
+
+এই নোটে Dart OOP-এর সবচেয়ে গুরুত্বপূর্ণ ৩টা বিষয় সহজভাবে দেওয়া হলো।
+
+---
+
+#### 1️⃣ Inheritance কী? কেন ব্যবহার হয়?
+
+#### 🔹 Inheritance কী?
+
+👉 একটি class যখন আরেকটি class-এর property ও method ব্যবহার করে, তাকে **Inheritance** বলে।
+
+Parent class → Child class
+(`extends` keyword দিয়ে হয়)
+
+---
+
+#### 🔹 কেন ব্যবহার হয়?
+
+✔ Code reuse
+✔ Duplicate code কমে
+✔ Real-world relationship বোঝানো যায়
+
+---
+
+#### 🔹 Simple Example
+
+```dart
+class Animal {
+  void eat() {
+    print("Animal is eating");
+  }
+}
+
+class Dog extends Animal {
+  void bark() {
+    print("Dog is barking");
+  }
+}
+
+void main() {
+  Dog d = Dog();
+  d.eat();   // parent method
+  d.bark();  // child method
+}
+```
+
+---
+
+### 2️⃣ `super` কী? কেন ব্যবহার হয়?
+
+#### `super` কী?
+
+ `super` হলো **parent class-এর reference**
+Child class থেকে parent-এর method, variable বা constructor access করতে ব্যবহার হয়।
+
+---
+
+#### কেন ব্যবহার হয়?
+
+✔ Parent method call করতে
+✔ Method overriding এর সময় parent logic রাখতে
+✔ Parent constructor call করতে
+
+---
+
+##### Simple Example
+
+```dart
+class Parent {
+  void show() {
+    print("This is Parent");
+  }
+}
+
+class Child extends Parent {
+  void display() {
+    super.show(); // parent method call
+    print("This is Child");
+  }
+}
+
+void main() {
+  Child c = Child();
+  c.display();
+}
+```
+
+---
+
+### 3️⃣ Method Overriding কী? কেন ব্যবহার হয়?
+
+#### Method Overriding কী?
+
+ Parent class-এর method কে child class-এ **নতুনভাবে লেখা** হলো Method Overriding।
+
+---
+
+#### 🔹 কেন ব্যবহার হয়?
+
+✔ Child class-এর নিজস্ব behavior যোগ করতে
+✔ Parent method modify করতে
+✔ Runtime polymorphism এর জন্য
+
+---
+
+### 🔹 Simple Example
+
+```dart
+class Employee {
+  void work() {
+    print("Employee is working");
+  }
+}
+
+class Developer extends Employee {
+  @override
+  void work() {
+    print("Developer is coding");
+  }
+}
+
+void main() {
+  Developer d = Developer();
+  d.work();
+}
+```
+
+---
+
+#### Extra Tip (Interview Ready)
+
+* `extends` → inheritance
+* `super` → parent access
+* `@override` → method overriding
+
+---
+
+####  Conclusion
+
+✔ Inheritance → code reuse
+✔ super → parent access
+✔ Method Overriding → behavior change
+
+এই তিনটা ঠিকভাবে বুঝলে
+ **Dart OOP basic complete** 
+
+---
+

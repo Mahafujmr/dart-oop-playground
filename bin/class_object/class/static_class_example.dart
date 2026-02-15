@@ -20,6 +20,7 @@ static void addTwoNumber (var a, var b) {
   print('Add Two Number = $c');
 }
 }
+
 // creation class instance
 void main() {
   Mobile mobile = Mobile();

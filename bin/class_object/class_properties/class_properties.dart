@@ -6,7 +6,7 @@ class Mobile{
   String ? mobileName;
   String ? band;
   double? price;
-  //✅ class properties =>  mobileName | band | price
+  //✅ class properties =>  mobileName | band | price ✅
 }
 void main() {
   Mobile mobile = Mobile();
