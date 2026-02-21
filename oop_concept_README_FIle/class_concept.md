@@ -93,6 +93,158 @@ class Car {
 
 ---
 
+---
+
+#### 📘 Dart OOP – Method (বাংলা নোট)
+
+#### 📌 Method কী?
+
+**Method** হলো class এর ভিতরের একটি function।
+এটি নির্ধারণ করে একটি object কী কী কাজ করতে পারবে।
+
+👉 সহজভাবে:
+
+> Method = Object এর কাজ করার ক্ষমতা
+
+---
+
+#### 🔹 Method এর সাধারণ গঠন
+
+```dart
+returnType methodName(parameters) {
+  // কাজের কোড
+}
+```
+
+#### ব্যাখ্যা:
+
+* `returnType` → method কী ধরনের data return করবে
+* `methodName` → method এর নাম
+* `parameters` → input (যদি থাকে)
+
+---
+
+#### 📌 Method এর ধরন
+
+---
+
+#### 1️⃣ Instance Method
+
+Object দিয়ে call করতে হয়।
+
+```dart
+class Person {
+  void greet() {
+    print("Hello");
+  }
+}
+
+void main() {
+  Person p = Person();
+  p.greet();
+}
+```
+
+✔ Object ছাড়া call করা যাবে না
+
+---
+
+#### 2️⃣ Parameter সহ Method
+
+Input নেয়।
+
+```dart
+class Calculator {
+  void add(int a, int b) {
+    print(a + b);
+  }
+}
+```
+
+✔ Method input নিয়ে কাজ করে
+
+---
+
+#### 3️⃣ Return Type সহ Method
+
+Value return করে।
+
+```dart
+class MathUtils {
+  int multiply(int a, int b) {
+    return a * b;
+  }
+}
+```
+
+✔ `int` হলো return type
+✔ `return` keyword ব্যবহার করা হয়
+
+---
+
+#### 4️⃣ Static Method
+
+Object ছাড়া call করা যায়।
+
+```dart
+class Helper {
+  static void sayHello() {
+    print("Hello");
+  }
+}
+
+void main() {
+  Helper.sayHello();
+}
+```
+
+✔ Class level method
+✔ Object দরকার হয় না
+
+---
+
+#### 📌 কেন Method গুরুত্বপূর্ণ?
+
+✔ Code organize করে
+✔ Logic reusable করে
+✔ Object এর behavior define করে
+✔ Clean structure তৈরি করে
+
+---
+
+#### 📌 Best Practices
+
+* Meaningful নাম ব্যবহার করো
+* এক method = এক কাজ
+* Method ছোট রাখো
+* অপ্রয়োজনীয় বড় logic এড়িয়ে চলো
+
+---
+
+#### 📌 Quick Summary
+
+| বিষয়            | ব্যাখ্যা                 |
+| --------------- | ------------------------ |
+| Method          | Class এর ভিতরের function |
+| Instance Method | Object দিয়ে call হয়      |
+| Static Method   | Class দিয়ে call হয়       |
+| Return Type     | Method কী return করবে    |
+
+---
+
+#### 🚀 Conclusion
+
+Method হলো OOP এর একটি গুরুত্বপূর্ণ অংশ।
+Method ভালোভাবে না বুঝলে
+Inheritance, Polymorphism, Flutter — সবকিছু কঠিন হয়ে যাবে।
+
+
+
+
+
+
+
+
 #### 📌 ৫. সব একসাথে বুঝুন
 
 ### Real Life Example: মোবাইল ফোন
@@ -267,3 +419,200 @@ void main() {
 - **Properties/Attributes** = Class এর variables/data
 
 এই তিনটা concept বুঝলেই Dart Class বুঝে গেছেন! 🎉
+
+
+#### 📘 Dart OOP – Constructor (বাংলা নোট)
+
+#### 📌 Constructor কী?
+
+**Constructor** হলো একটি special method যা object তৈরি হওয়ার সময় স্বয়ংক্রিয়ভাবে call হয়।
+
+👉 Class এর নামের মতোই Constructor এর নাম হয়।
+👉 Object তৈরি হলে এটি initialization এর কাজ করে।
+
+---
+
+#### 🔹 Constructor এর সাধারণ গঠন
+
+```dart
+class ClassName {
+  ClassName() {
+    // initialization code
+  }
+}
+```
+
+---
+
+#### 📌 Constructor এর ধরন
+
+---
+
+#### 1️⃣ Default Constructor
+
+#### 🔹 কী?
+
+যদি আমরা নিজে কোনো constructor না লিখি,
+তাহলে Dart automatically একটি default constructor তৈরি করে।
+
+---
+
+#### 🔹 Example
+
+```dart
+class Person {
+  Person() {
+    print("Object created");
+  }
+}
+
+void main() {
+  Person p = Person();
+}
+```
+
+#### বৈশিষ্ট্য
+
+✔ কোনো parameter নেয় না
+✔ Basic initialization এর জন্য
+
+---
+
+#### 2️⃣ Parameterized Constructor
+
+#### 🔹 কী?
+
+যে constructor parameter নেয়, তাকে Parameterized Constructor বলে।
+
+👉 Object তৈরির সময় data পাঠানো যায়।
+
+---
+
+#### 🔹 Example
+
+```dart
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+}
+
+void main() {
+  Person p = Person("Tuhin", 22);
+}
+```
+
+####  কী হচ্ছে?
+
+* `this.name` → class এর variable initialize করছে
+* Object তৈরি করার সময় data pass করা হচ্ছে
+
+---
+
+#### 🔹 Alternative (Manual Assignment)
+
+```dart
+class Person {
+  String name;
+  int age;
+
+  Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+---
+
+####  বৈশিষ্ট্য
+
+✔ Object specific data নেয়
+✔ Real project এ সবচেয়ে বেশি ব্যবহৃত
+
+---
+
+#### 3️⃣ Named Constructor
+
+#### 🔹 কী?
+
+একটি class এ একাধিক constructor তৈরি করার জন্য Named Constructor ব্যবহার করা হয়।
+
+👉 Format:
+
+```
+ClassName.constructorName()
+```
+
+---
+
+#### 🔹 Example
+
+```dart
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  Person.guest() {
+    name = "Guest";
+    age = 0;
+  }
+}
+
+void main() {
+  Person p1 = Person("Tuhin", 22);
+  Person p2 = Person.guest();
+}
+```
+
+---
+
+#### 🧠 কেন দরকার?
+
+✔ Multiple initialization system
+
+✔ Different object creation logic
+
+✔ Clean & readable code
+
+---
+
+#### 📌 Quick Comparison
+
+| Type          | Parameter নেয়? | ব্যবহার                   |
+| ------------- | -------------- | ------------------------- |
+| Default       | ❌              | Basic object creation     |
+| Parameterized | ✅              | Data সহ object তৈরি       |
+| Named         | Optional       | Multiple constructor তৈরি |
+
+---
+
+#### 📌 Best Practices
+
+✔ Initialization clear রাখো
+
+✔ Named constructor meaningful নাম দাও
+
+✔ প্রয়োজন ছাড়া complex constructor লিখো না
+
+✔ Large project এ multiple named constructor useful
+
+---
+
+#### 🚀 Conclusion
+
+Constructor ব্যবহার করা হয় object initialize করার জন্য।
+
+✔ Default → simple
+✔ Parameterized → data সহ
+✔ Named → multiple creation logic
+
+Constructor ভালোভাবে না বুঝলে
+OOP এবং Flutter model class বুঝতে সমস্যা হবে।
+
+---
+
+

@@ -76,7 +76,7 @@ int _age;
 **Getter** হলো একটি বিশেষ method
 যার কাজ হলো—
 
-> **private variable-এর value নিরাপদভাবে পড়তে দেওয়া**
+> **Getter হলো একটি special method যেটা ব্যবহার করে আমরা private variable-এর value পড়তে (read) পারি কিন্তু পরিবর্তন (change) করতে পারি না।**
 
 ####  কেন Getter দরকার?
 
@@ -110,12 +110,12 @@ class Person {
 
 ---
 
-####  Setter কী? (Deep Explanation)
+####  ✅Setter কী? (Deep Explanation)
 
 **Setter** হলো এমন একটি method
 যার কাজ হলো—
 
-> **private variable-এর value পরিবর্তন করা, কিন্তু আমাদের শর্ত অনুযায়ী**
+> **Setter হলো একটি special method যার মাধ্যমে আমরা private variable-এর value পরিবর্তন (set) করতে পারি কিন্তু সেই পরিবর্তনটা হয় নিয়ন্ত্রণ (control) ও validation সহ।**
 
 ####  Setter কেন দরকার?
 
@@ -179,7 +179,9 @@ void main() {
 ####  উদাহরণে
 
 ✔ `_balance` পুরোপুরি protected
+
 ✔ ভুল data ঢুকতে পারবে না
+
 ✔ safe & professional design
 
 ---
