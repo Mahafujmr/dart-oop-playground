@@ -1,5 +1,5 @@
 class Restaurant{
-  // property
+  //private  property
    int _id = 234;
   // access private variable / get= access private variable
   int get userId => _id;
