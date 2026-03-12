@@ -15,7 +15,7 @@ class Student extends Teacher {
 class AllStudent implements Teacher{
   @override
   void subject() {
-    // TODO: implement subject
+    print('All subject add for Teacher');
   }
 
 }
@@ -23,4 +23,6 @@ class AllStudent implements Teacher{
 void main() {
   Student student = Student();
   student.subject();
+  AllStudent allStudent = AllStudent();
+  allStudent.subject();
 }
